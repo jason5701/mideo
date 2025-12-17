@@ -1,15 +1,25 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
-    "module": "commonjs",
-    "jsx": "react-jsx",
-    "strict": true,
-    "noEmit": true,
-    "lib": ["es2015"],
-    "esModuleInterop": true,
+    // ▼ 이 부분들을 바꿔주시옵소서
+    "target": "esnext",
+    "module": "esnext", // <--- 여기가 핵심 해결책이옵니다!
+    "moduleResolution": "node", // 또는 "bundler" (버전에 따라 다름)
+    "lib": ["dom", "dom.iterable", "esnext"],
+
+    // ▼ Vite의 환경변수(import.meta.env)를 인식하기 위해 필수
+    "types": ["vite/client"],
+
+    "allowJs": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noUnusedLocals": true
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
-  "exclude": ["remotion.config.ts"]
+  "include": ["src"]
 }

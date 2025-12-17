@@ -7,27 +7,34 @@
   "private": true,
   "dependencies": {
     "@remotion/cli": "4.0.392",
+    "@remotion/player": "^4.0.392",
+    "@remotion/tailwind-v4": "4.0.392",
     "@remotion/zod-types": "4.0.392",
+    "firebase": "^12.7.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "remotion": "4.0.392",
-    "zod": "3.22.3",
-    "@remotion/tailwind-v4": "4.0.392",
-    "tailwindcss": "4.0.0"
+    "tailwindcss": "4.0.0",
+    "zod": "3.22.3"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.392",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.1",
     "@types/react": "19.0.0",
     "@types/web": "0.0.166",
     "eslint": "9.19.0",
+    "jest": "^30.2.0",
     "prettier": "3.6.0",
-    "typescript": "5.8.2"
+    "typescript": "5.8.2",
+    "vite": "^7.3.0"
   },
   "scripts": {
-    "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "dev": "vite",
+    "build:web": "vite build"
   },
   "sideEffects": [
     "*.css"
